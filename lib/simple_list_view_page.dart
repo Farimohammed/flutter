@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_list_view/buttons_page.dart';
 import 'package:simple_list_view/custom_list_tile.dart';
+import 'package:simple_list_view/stories_page_controller.dart';
+import 'package:simple_list_view/story_full_page_view.dart';
 
 class SimpleListViewPage extends StatelessWidget {
   const SimpleListViewPage({super.key});
@@ -11,7 +13,12 @@ class SimpleListViewPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('My List View'),
         actions: [
-          Icon(Icons.list),
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => StoriesPageController()));
+              },
+              icon: Icon(Icons.more)),
           IconButton(
               onPressed: () {
                 Navigator.of(context)

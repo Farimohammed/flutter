@@ -9,17 +9,17 @@ class ButtonsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Buttons Page'),
+          title: const Text('Buttons Page'),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (_) => TabBarDemo()));
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const TabBarDemo()));
                   },
-                  child: Text('Elevated Button')),
+                  child: const Text('Elevated Button')),
               const SizedBox(
                 height: 12,
               ),
